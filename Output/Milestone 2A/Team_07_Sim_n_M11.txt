@@ -1,0 +1,40 @@
+Cache Simulator CS 3853 Spring 2024 - Group #07
+
+***** Cache Input Parameters *****
+Cache Size:                     8 KB
+Block Size:                     8 bytes
+Associativity:                  1
+Replacement Policy              Round Robin
+Physical Memory                 1024 MB
+Percent Memory Used by System:  0
+Instructions / Time Slice:      -1
+
+***** Cache Calculated Values *****
+Total # Blocks:                 1024
+Tag Size:                       19 bits
+Index Size:                     10 bits
+Total # Rows:                   1024
+Overhead Size:                  525312 bytes
+Implementation Memory Size:     521.00 KB (533504 bytes)
+Cost:                           $78.15 @ ($0.15 / KB)
+
+***** Physical Memory Calculations *****
+Number of Physical Pages:       262144
+Number of Pages for System:     0
+Size of Page Table Entry:       19 bits
+Total RAM for Page Table(s):    0 bytes
+
+***** CACHE SIMULATION RESULTS *****
+Total Cache Accesses:          0 (Placeholder addresses)
+Instruction Bytes:             0 SrcDst Bytes: Placeholder
+Cache Hits:                    0
+Cache Misses:                  0
+--- Compulsory Misses:         0
+--- Conflict Misses:           0
+
+***** *****  CACHE HIT & MISS RATE:  ***** *****
+Hit Rate:                      0.0000%
+Miss Rate:                     0.0000%
+CPI:                           NaN Cycles/Instruction
+Unused Cache Space:            8.00 KB / 521.0 KB = 1.54% Waste: $1.20
+Unused Cache Blocks:           1024 / 1024

@@ -1,0 +1,51 @@
+Cache Simulator CS 3853 Spring 2024 - Group #07
+
+Trace file: Trace1.trc
+
+***** Cache Input Parameters *****
+Cache Size:                     512 KB
+Block Size:                     16 bytes
+Associativity:                  4
+Replacement Policy              Round Robin
+Physical Memory                 1024 MB
+Percent Memory Used by System:  75
+Instructions / Time Slice:      100
+
+***** Cache Calculated Values *****
+Total # Blocks:                 32768
+Tag Size:                       15 bits
+Index Size:                     13 bits
+Total # Rows:                   8192
+Overhead Size:                  65536 bytes
+Implementation Memory Size:     576.00 KB (589824 bytes)
+Cost:                           $86.40 @ ($0.15 / KB)
+
+***** Physical Memory Calculations *****
+Number of Physical Pages:       262144
+Number of Pages for System:     196608
+Size of Page Table Entry:       19 bits
+Total RAM for Page Table(s):    1245184 bytes
+
+***** Trace file addresses and bytes *****
+Trace file: Trace1.trc
+7c81eb33: (01)
+7c81eb34: (01)
+7c81eb35: (03)
+78158e69: (01)
+78158e6a: (03)
+01763891: (01)
+01763892: (01)
+01763893: (01)
+01763894: (01)
+01763895: (01)
+01763896: (01)
+01763897: (01)
+01763898: (01)
+01763899: (01)
+0176389a: (01)
+0176389b: (01)
+0176389c: (01)
+0176389d: (01)
+0176389e: (01)
+0176389f: (01)
+
