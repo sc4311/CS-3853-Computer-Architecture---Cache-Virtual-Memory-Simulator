@@ -9,13 +9,13 @@
 ## Objectives
 The goal of this project is to simulate the internal operations of CPU caches and a simple virtual memory scheme. This involves creating a Level 1 cache simulator for a 32-bit CPU, mapping virtual memory to physical memory, and analyzing the results through performance comparison.
 
-## Team Composition
-- Work in groups of 2 to 3 students, with 3 being preferred.
-- The project requires coding, testing, documenting results, and writing the final report.
-- Every member must contribute to receive credit.
+## Team Members
+- LordAndradus
+- Trish
+- sc4311
 
 ## Programming Languages and Tools
-- You may use Python, C/C++, or Java to implement the simulator.
+- Using Java to implement the simulator.
 
 ## Simulator Specifications
 - Command line configurable cache simulation.
@@ -34,7 +34,7 @@ The goal of this project is to simulate the internal operations of CPU caches an
 Instructions on how to install or set up your project, including any dependencies or prerequisites.
 
 ## Usage
-How to run the simulator, including the command-line arguments and examples of typical use cases.
+To use the Cache & Virtual Memory Simulator, run the executable from the command line with the necessary arguments to configure the cache and memory settings. After running, the simulator will output the results of the trace file analysis.
 
 ```shell
 CacheSim_v2.10.exe -s 512 -b 16 -a 4 -r rr -p 1024 -n 100 -u 75 -f Trace1.trc -f Trace2_4Evaluation.trc -f corruption1.trc
