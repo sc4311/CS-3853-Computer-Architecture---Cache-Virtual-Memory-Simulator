@@ -32,6 +32,15 @@ public class Cache
     private final int indexBits;
     private final int blockOffsetBits;
 
+
+    /**
+     * Constructs a Cache object with the specified CPU, size, block size, associativity, and instructions per time slice.
+     * @param cpu the CPU
+     * @param size the size
+     * @param blockSize the block size
+     * @param associativity the associativity
+     * @param instructionPerTimeSlice the instructions per time slice
+     */
     public Cache(CPU cpu, int size, int blockSize, int associativity, int instructionPerTimeSlice)
     {
         referenceCPU = cpu;
@@ -60,11 +69,22 @@ public class Cache
         for(int i = 0; i < sets.length; i++) sets[i] = new Set(associativity, numBlocks);
     }
 
+
+    /**
+     * Checks if the address is not in memory.
+     * @param address the address to check
+     * @return true if the address is not in memory, false otherwise
+     */
     private boolean isAddressNotInMemory(AddressSplit address)
     {
         return Objects.isNull(sets[address.getIndex()].getValidBlock(address));
     }
 
+
+    /**
+     * Inserts the address into the cache.
+     * @param address the address to insert
+     */
     private void insertAddress(AddressSplit address)
     {
         Set set = sets[address.getIndex()];
@@ -95,6 +115,12 @@ public class Cache
         removable.fillBlock(address, data);
     }
 
+
+    /**
+     * Reads data from the cache at the specified address.
+     * @param addr the address to read from
+     * @return true if the read was successful, false otherwise
+     */
     protected boolean read(int addr)
     {
         AddressSplit address = new AddressSplit(addr, indexBits, blockOffsetBits);
@@ -111,6 +137,12 @@ public class Cache
         return true;
     }
 
+    /**
+     * Writes data to the cache at the specified address.
+     * @param addr the address to write to
+     * @param data the data to write
+     * @return true if the write was successful, false otherwise
+     */
     protected boolean write(int addr, int data)
     {
         AddressSplit address = new AddressSplit(addr, indexBits, blockOffsetBits);
@@ -127,71 +159,127 @@ public class Cache
         return true;
     }
 
+    /**
+     * Returns the size of the cache.
+     * @return the size of the cache
+     */
     public int getSize()
     {
         return size;
     }
 
+    /**
+     * Returns the block size of the cache.
+     * @return the block size of the cache
+     */
     public int getBlockSize()
     {
         return blockSize;
     }
 
+    /**
+     * Returns the associativity of the cache.
+     * @return the associativity of the cache
+     */
     public int getAssociativity()
     {
         return associativity;
     }
 
+    /**
+     * Returns the instructions per time slice.
+     * @return the instructions per time slice
+     */
     public int getInstructionPerTimeSlice()
     {
         return instructionPerTimeSlice;
     }
 
+    /**
+     * Returns the number of blocks.
+     * @return the number of blocks
+     */
     public int getNumBlocks()
     {
         return numBlocks;
     }
 
+    /**
+     * Returns the number of sets.
+     * @return the number of sets
+     */
     public int getNumSets()
     {
         return numSets;
     }
 
+    /**
+     * Returns the overhead size.
+     * @return the overhead size
+     */
     public int getOverHeadSize()
     {
         return overHeadSize;
     }
 
+    /**
+     * Returns the implementation size.
+     * @return the implementation size
+     */
     public long getImplementationSize()
     {
         return implementationSize;
     }
 
+    /**
+     * Returns the implementation size in KB.
+     * @return the implementation size in KB
+     */
     public double getImplementationSizeKB()
     {
         return implementationSizeKB;
     }
 
+    /**
+     * Returns the CPU.
+     * @return the CPU
+     */
     public CPU getCPU()
     {
         return referenceCPU;
     }
 
+    /**
+     * Returns the sets.
+     * @return the sets
+     */
     public Set[] getSets()
     {
         return sets;
     }
 
+    /**
+     * Returns the tag bits.
+     * @return the tag bits
+     */
     public int getNumTagBits()
     {
         return tagBits;
     }
 
+    /**
+     * Returns the index bits.
+     * @return the index bits
+     */
     public int getNumIndexBits()
     {
         return indexBits;
     }
 
+    /**
+     * Returns the block offset bits.
+     * @return the block offset bits
+     */
     public int getNumBlockOffsetBits()
     {
         return blockOffsetBits;

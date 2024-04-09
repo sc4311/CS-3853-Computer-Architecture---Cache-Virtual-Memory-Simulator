@@ -1,10 +1,18 @@
 package data;
 
+/**
+ * Enum representing the policy for cache replacement.
+ */
 public enum Policy
 {
     RoundRobin,
     Random;
 
+    /**
+     * Converts a string to a Policy.
+     * @param argument the string to convert
+     * @return the corresponding Policy
+     */
     public static Policy stringToPolicy(String argument)
     {
         if (argument.equals("RND"))
@@ -15,6 +23,10 @@ public enum Policy
         return Policy.RoundRobin;
     }
 
+    /**
+     * Returns a string representation of the Policy.
+     * @return a string representation of the Policy
+     */
     public String toString()
     {
         switch(this)

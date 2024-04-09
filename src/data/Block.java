@@ -12,11 +12,18 @@ public class Block
 
     int[] data;
 
+    /**
+     * Default constructor that initializes a block with size 0.
+     */
     public Block()
     {
         this(0);
     }
 
+    /**
+     * Constructor that initializes a block with the specified size.
+     * @param blockSize the size of the block
+     */
     public Block(int blockSize)
     {
         this.blockSize = blockSize;
@@ -26,12 +33,24 @@ public class Block
         this.valid = false;
     }
 
+    /**
+     * Reads data from the block at the specified address.
+     * @param address the address to read from
+     * @param access the access number
+     * @return the data read from the block
+     */
     public int read(AddressSplit address, int access)
     {
         if(queueNumber == 0) queueNumber = access;
         return data[address.getOffset()];
     }
 
+    /**
+     * Writes data to the block at the specified address.
+     * @param address the address to write to
+     * @param data the data to write
+     * @param access the access number
+     */
     public void write(AddressSplit address, int data, int access)
     {
         if(queueNumber == 0) queueNumber = access;
@@ -40,6 +59,11 @@ public class Block
         setDirty(true);
     }
 
+    /**
+     * Fills the block with the specified data.
+     * @param address the address of the block
+     * @param data the data to fill the block with
+     */
     public void fillBlock(AddressSplit address, int[] data)
     {
         this.tag = address.getTag();
@@ -88,6 +112,11 @@ public class Block
         return queueNumber;
     }
 
+
+    /**
+     * Returns a string representation of the block.
+     * @return a string representation of the block
+     */
     public String toString()
     {
         return String.format("""

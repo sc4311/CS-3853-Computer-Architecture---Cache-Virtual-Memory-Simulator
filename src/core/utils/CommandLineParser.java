@@ -11,6 +11,12 @@ import java.util.ArrayList;
 
 public class CommandLineParser
 {
+
+    /**
+     * Parses the command line arguments and returns a CPU object.
+     * @param arguments the command line arguments
+     * @return the CPU object
+     */
     public static CPU parseCommands(String[] arguments)
     {
         if(arguments.length % 2 != 0) System.err.println("WARNING::All flags do not have an argument and vice versa");
@@ -76,6 +82,15 @@ public class CommandLineParser
         return cpu;
     }
 
+
+    /**
+     * Checks if the given parameter is within the specified range.
+     * @param check the parameter to check
+     * @param min the minimum value
+     * @param max the maximum value
+     * @param varName the name of the variable
+     * @return the checked parameter
+     */
     private static long paramChecker(long check, long min, long max, String varName)
     {
         boolean condition = (check < min || check > max);
@@ -83,6 +98,15 @@ public class CommandLineParser
         return condition ? min : check;
     }
 
+
+    /**
+     * Checks if the given parameter is a power of 2 and within the specified range.
+     * @param check the parameter to check
+     * @param min the minimum value
+     * @param max the maximum value
+     * @param varName the name of the variable
+     * @return the checked parameter
+     */
     private static long powChecker(long check, long min, long max, String varName)
     {
         long result = paramChecker(check, min, max, varName);
@@ -91,6 +115,13 @@ public class CommandLineParser
         return condition ? min : result;
     }
 
+
+    /**
+     * Returns a string of powers of 2 within the specified range.
+     * @param min the minimum value
+     * @param max the maximum value
+     * @return the string of powers of 2
+     */
     private static String powersOf2(long min, long max)
     {
         StringBuilder sb = new StringBuilder();

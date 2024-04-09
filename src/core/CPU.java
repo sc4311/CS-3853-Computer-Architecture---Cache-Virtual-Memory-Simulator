@@ -32,6 +32,10 @@ public class CPU
 //Emulation specifics
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    /**
+     * Generates a string representation of trace file addresses and bytes.
+     * @return a string representation of trace file addresses and bytes
+     */
     public String milestone1()
     {
         StringBuilder sb = new StringBuilder();
@@ -96,6 +100,11 @@ public class CPU
         return sb.toString();
     }
 
+
+    /**
+     * Generates a string representation of cache simulation results and unused cache space.
+     * @return a string representation of cache simulation results and unused cache space
+     */
     public String milestone2A()
     {
         StringBuilder sb = new StringBuilder();
@@ -118,6 +127,11 @@ public class CPU
         return sb.toString();
     }
 
+
+    /**
+     * Reads a trace file and performs cache operations based on its content.
+     * @param trace the trace file to read
+     */
     public void readTraceFile(File trace)
     {
         try(BufferedReader br = new BufferedReader(new FileReader(trace)))
@@ -184,12 +198,24 @@ public class CPU
         }
     }
 
+
+    /**
+     * Writes data to the physical memory at the specified address.
+     * @param address the address to write to
+     * @param data the data to write
+     */
     public void physicalMemoryWrite(AddressSplit address, int data)
     {
         //In the future, convert physical memory address from virtual address using TLB
         physicalMemory.write(address, data);
     }
 
+
+    /**
+     * Reads data from the physical memory at the specified address.
+     * @param address the address to read from
+     * @return the data read from the physical memory
+     */
     public int physicalMemoryRead(AddressSplit address)
     {
         return physicalMemory.read(address);
@@ -254,6 +280,11 @@ public class CPU
         return statistics;
     }
 
+
+    /**
+     * Returns a string representation of cache input parameters, calculated values, and physical memory calculations.
+     * @return a string representation of cache input parameters, calculated values, and physical memory calculations
+     */
     public String information()
     {
         StringBuilder sb = new StringBuilder();

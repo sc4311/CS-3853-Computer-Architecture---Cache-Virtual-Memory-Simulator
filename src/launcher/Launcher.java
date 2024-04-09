@@ -15,6 +15,11 @@ public class Launcher
     private static String fileNameMileStone2A = "Output/Milestone 2A/Team_07_Sim_n_M11.txt";
     private static String fileNameMileStone2B = "Output/Milestone 2B/Team_07_Sim_n_M11.txt";
 
+
+    /**
+     * The main method of the application.
+     * @param args command line arguments
+     */
     public static void main(String[] args)
     {
         /*
@@ -35,6 +40,12 @@ public class Launcher
         }
     }
 
+
+    /**
+     * Writes the output of the CPU to a file.
+     * @param filename the name of the file to write to
+     * @param cpu the CPU object to get information from
+     */
     public static void writer(String filename, CPU cpu)
     {
         ArrayList<String> output = new ArrayList<>();
