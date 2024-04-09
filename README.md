@@ -4,7 +4,7 @@
 - **Course:** CS 3853 Computer Architecture, Spring 2024
 - **Group Project:** Cache & Virtual Memory Simulator
 - **Final Project Due:** Thu, May 2nd, 2024, 11:59 PM
-- **Note:** No late assignments will be accepted.
+- **Completed:** 4/6/2024
 
 ## Objectives
 The goal of this project is to simulate the internal operations of CPU caches and a simple virtual memory scheme. This involves creating a Level 1 cache simulator for a 32-bit CPU, mapping virtual memory to physical memory, and analyzing the results through performance comparison.
